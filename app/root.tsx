@@ -18,6 +18,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import { themeSessionResolver } from "./sessions.server";
+import { TooltipProvider } from "./common/components/ui/tooltip";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -70,7 +71,7 @@ function InnerLayout({
       </head>
       <body>
         <div className="w-full min-h-screen h-full dark:bg-linear-to-br dark:from-gray-950 dark:via-gray-900 dark:to-blue-950">
-          {children}
+          <TooltipProvider>{children}</TooltipProvider>
         </div>
         <ScrollRestoration />
         <Scripts />

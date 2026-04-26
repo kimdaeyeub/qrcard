@@ -1,0 +1,202 @@
+import BusinessCard from "../cards/business-card";
+
+const datas = [
+  {
+    title: "회사용",
+    imageUrl: "https://github.com/shadcn.png",
+    description: "안녕하세요! 저는 Github를 다니고 있는 개발자입니다.",
+    infos: [
+      { type: "Instagram", value: "hello@world" },
+      { type: "Email", value: "hello@world.com" },
+      { type: "phone", value: "010-1234-1234" },
+      { type: "Facebook", value: "hello.world.profile" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "YouTube", value: "LifestyleCreatorJo" },
+      { type: "TikTok", value: "lifestyle_jo_" },
+      { type: "Email", value: "business@contentcreator.kr" },
+    ],
+  },
+  {
+    title: "디자인스튜디오",
+    imageUrl: "https://github.com/shadcn.png",
+    description: "창의적인 디자인을 통해 브랜드를 만드는 디자이너입니다.",
+    infos: [
+      { type: "Instagram", value: "design_studio_kr" },
+      { type: "Email", value: "contact@designstudio.co.kr" },
+      { type: "phone", value: "02-1234-5678" },
+      { type: "LinkedIn", value: "design-studio-korea" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "YouTube", value: "LifestyleCreatorJo" },
+      { type: "TikTok", value: "lifestyle_jo_" },
+      { type: "Email", value: "business@contentcreator.kr" },
+    ],
+  },
+  {
+    title: "카페 사장",
+    imageUrl: "https://github.com/shadcn.png",
+    description: "서울 강남에서 감성 카페를 운영 중입니다. 언제든 방문하세요!",
+    infos: [
+      { type: "Instagram", value: "cafe_moca_seoul" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "YouTube", value: "LifestyleCreatorJo" },
+      { type: "TikTok", value: "lifestyle_jo_" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "Email", value: "info@cafemoca.kr" },
+      { type: "phone", value: "010-5678-9012" },
+      { type: "Facebook", value: "cafemocaseoul" },
+    ],
+  },
+  {
+    title: "프리랜스 사진작가",
+    imageUrl: "https://github.com/shadcn.png",
+    description: "결혼식, 상품촬영, 프로필 촬영 등 다양한 사진 작업을 합니다.",
+    infos: [
+      { type: "Instagram", value: "photographer_jay" },
+      { type: "Email", value: "jay.photo@gmail.com" },
+      { type: "phone", value: "010-9876-5432" },
+      { type: "YouTube", value: "JayPhotoStudio" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "YouTube", value: "LifestyleCreatorJo" },
+      { type: "TikTok", value: "lifestyle_jo_" },
+      { type: "Email", value: "business@contentcreator.kr" },
+    ],
+  },
+  {
+    title: "스타트업 대표",
+    imageUrl: "https://github.com/shadcn.png",
+    description:
+      "교육 기술 스타트업을 운영하는 CEO입니다. 함께할 파트너를 찾습니다.",
+    infos: [
+      { type: "Email", value: "ceo@edtech-startup.kr" },
+      { type: "phone", value: "031-1234-5678" },
+      { type: "LinkedIn", value: "startup-ceo-kim" },
+      { type: "Twitter", value: "@edtech_startup_kr" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "YouTube", value: "LifestyleCreatorJo" },
+      { type: "TikTok", value: "lifestyle_jo_" },
+      { type: "Email", value: "business@contentcreator.kr" },
+    ],
+  },
+  {
+    title: "피트니스 트레이너",
+    imageUrl: "https://github.com/shadcn.png",
+    description: "개인 맞춤형 운동 프로그램으로 당신의 목표를 달성해 드립니다.",
+    infos: [
+      { type: "Instagram", value: "fitness_trainer_min" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "YouTube", value: "LifestyleCreatorJo" },
+      { type: "TikTok", value: "lifestyle_jo_" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "Email", value: "min.trainer@fitness.com" },
+      { type: "phone", value: "010-1111-2222" },
+      { type: "Telegram", value: "@fitnesstrainermin" },
+    ],
+  },
+  {
+    title: "마케팅 전문가",
+    imageUrl: "https://github.com/shadcn.png",
+    description:
+      "소셜 미디어 마케팅과 브랜드 전략으로 사업 성장을 도와드립니다.",
+    infos: [
+      { type: "Instagram", value: "marketing_pro_seoul" },
+      { type: "Email", value: "hello@marketingpro.co.kr" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "YouTube", value: "LifestyleCreatorJo" },
+      { type: "TikTok", value: "lifestyle_jo_" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "phone", value: "02-9999-8888" },
+      { type: "LinkedIn", value: "marketing-expert-park" },
+    ],
+  },
+  {
+    title: "웹 디자이너",
+    imageUrl: "https://github.com/shadcn.png",
+    description: "반응형 웹 디자인과 UI/UX로 최고의 사용자 경험을 만듭니다.",
+    infos: [
+      { type: "Email", value: "design@webdesigner.kr" },
+      { type: "phone", value: "010-3333-4444" },
+      { type: "GitHub", value: "webdesigner-lee" },
+      { type: "Twitter", value: "@webdesigner_kr" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "YouTube", value: "LifestyleCreatorJo" },
+      { type: "TikTok", value: "lifestyle_jo_" },
+      { type: "Email", value: "business@contentcreator.kr" },
+    ],
+  },
+  {
+    title: "한의사",
+    imageUrl: "https://github.com/shadcn.png",
+    description:
+      "30년 경력의 한의사입니다. 건강한 삶을 위해 언제나 준비되어 있습니다.",
+    infos: [
+      { type: "Email", value: "clinic@haneuiclinic.kr" },
+      { type: "phone", value: "02-2222-3333" },
+      { type: "Instagram", value: "haneuiclinic_seoul" },
+      { type: "Facebook", value: "haneui.clinic" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "YouTube", value: "LifestyleCreatorJo" },
+      { type: "TikTok", value: "lifestyle_jo_" },
+      { type: "Email", value: "business@contentcreator.kr" },
+    ],
+  },
+  {
+    title: "콘텐츠 크리에이터",
+    imageUrl: "https://github.com/shadcn.png",
+    description: "일상 vlog와 라이프스타일 콘텐츠로 소통하는 크리에이터입니다.",
+    infos: [
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "YouTube", value: "LifestyleCreatorJo" },
+      { type: "TikTok", value: "lifestyle_jo_" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "Instagram", value: "lifestyle_creator_jo" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "YouTube", value: "LifestyleCreatorJo" },
+      { type: "TikTok", value: "lifestyle_jo_" },
+      { type: "Email", value: "business@contentcreator.kr" },
+      { type: "YouTube", value: "LifestyleCreatorJo" },
+      { type: "TikTok", value: "lifestyle_jo_" },
+    ],
+  },
+];
+
+const BusinessCardsGrid = () => {
+  return (
+    <div className="w-full pt-10 grid grid-cols-3 gap-5">
+      {datas.map((data, index) => (
+        <BusinessCard key={index} data={data} />
+      ))}
+    </div>
+  );
+};
+
+export default BusinessCardsGrid;
